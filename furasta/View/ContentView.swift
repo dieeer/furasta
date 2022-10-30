@@ -11,6 +11,8 @@ struct ContentView: View {
     //    properties
     
     var headers: [Header] = headersData
+    var facts: [Fact] = factsData
+    var recipes: [Recipe] = recipesData
     
     
     var body: some View {
@@ -33,7 +35,38 @@ struct ContentView: View {
                 DishesView()
                     .frame(maxWidth: 640)
                 
+//                facts view
                 
+                Text("facts")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(alignment: .top, spacing: 60) {
+                        ForEach(facts) {
+                            item in FactsView(fact: item)
+                        }
+                    }
+                    
+                    .padding(.vertical)
+                    .padding(.leading, 60)
+                    .padding(.trailing, 20)
+                }
+                
+//                recipe cards
+                
+                Text("recipes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                
+                VStack(alignment: .center, spacing: 20){
+                    ForEach(recipes) {
+                        item in
+                        RecipeCardView(recipe: item)
+                    }
+                }
+                .frame(maxWidth: 640)
+                .padding(.horizontal)
                 
                 
                 
@@ -67,7 +100,7 @@ struct TitleModifier: ViewModifier {
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView(headers: headersData)
+            ContentView(headers: headersData, facts: factsData, recipes: recipesData)
         }
     }
 
