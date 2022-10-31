@@ -26,6 +26,12 @@
 		D09E271D290D532D00CF4C86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E271C290D532D00CF4C86 /* ContentView.swift */; };
 		D09E271F290D533000CF4C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09E271E290D533000CF4C86 /* Assets.xcassets */; };
 		D09E2722290D533000CF4C86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09E2721290D533000CF4C86 /* Preview Assets.xcassets */; };
+		D0B20B04290ECF1600F29546 /* RecipeRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B03290ECF1600F29546 /* RecipeRatingView.swift */; };
+		D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */; };
+		D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B07290ED07900F29546 /* RecipeDetailView.swift */; };
+		D0B20B0A29106F3000F29546 /* RipeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0929106F3000F29546 /* RipeningView.swift */; };
+		D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0B2910757300F29546 /* RipeningModel.swift */; };
+		D0B20B0E291075B500F29546 /* RipeningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0D291075B500F29546 /* RipeningData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,12 @@
 		D09E271C290D532D00CF4C86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D09E271E290D533000CF4C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09E2721290D533000CF4C86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0B20B03290ECF1600F29546 /* RecipeRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRatingView.swift; sourceTree = "<group>"; };
+		D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCookingView.swift; sourceTree = "<group>"; };
+		D0B20B07290ED07900F29546 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		D0B20B0929106F3000F29546 /* RipeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningView.swift; sourceTree = "<group>"; };
+		D0B20B0B2910757300F29546 /* RipeningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningModel.swift; sourceTree = "<group>"; };
+		D0B20B0D291075B500F29546 /* RipeningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 				D05326BC290D713A004A7018 /* HeaderData.swift */,
 				D05326C8290E9CFC004A7018 /* FactData.swift */,
 				D05326CC290EABC1004A7018 /* RecipeData.swift */,
+				D0B20B0D291075B500F29546 /* RipeningData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -78,6 +91,7 @@
 				D05326BA290D70F3004A7018 /* HeaderModel.swift */,
 				D05326C6290E9CBF004A7018 /* FactModel.swift */,
 				D05326CA290EAB50004A7018 /* RecipeModel.swift */,
+				D0B20B0B2910757300F29546 /* RipeningModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +99,7 @@
 		D05326AF290D5D78004A7018 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0B20B03290ECF1600F29546 /* RecipeRatingView.swift */,
 				D09E271C290D532D00CF4C86 /* ContentView.swift */,
 				D05326B0290D5DBC004A7018 /* FurastaView.swift */,
 				D05326B2290D5DDD004A7018 /* RipeningStagesView.swift */,
@@ -94,6 +109,8 @@
 				D05326BE290D7B17004A7018 /* DishesView.swift */,
 				D05326C2290E97D0004A7018 /* FactsView.swift */,
 				D05326CE290EAC32004A7018 /* RecipeCardView.swift */,
+				D0B20B07290ED07900F29546 /* RecipeDetailView.swift */,
+				D0B20B0929106F3000F29546 /* RipeningView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,6 +118,7 @@
 		D09E270E290D532D00CF4C86 = {
 			isa = PBXGroup;
 			children = (
+				D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */,
 				D09E2719290D532D00CF4C86 /* furasta */,
 				D09E2718290D532D00CF4C86 /* Products */,
 			);
@@ -208,8 +226,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05326B5290D5DEB004A7018 /* SettingsView.swift in Sources */,
+				D0B20B04290ECF1600F29546 /* RecipeRatingView.swift in Sources */,
+				D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */,
 				D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */,
 				D05326B7290D5E04004A7018 /* AppView.swift in Sources */,
+				D0B20B0E291075B500F29546 /* RipeningData.swift in Sources */,
 				D05326B3290D5DDD004A7018 /* RipeningStagesView.swift in Sources */,
 				D09E271D290D532D00CF4C86 /* ContentView.swift in Sources */,
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
@@ -217,11 +238,14 @@
 				D05326CB290EAB50004A7018 /* RecipeModel.swift in Sources */,
 				D05326BD290D713A004A7018 /* HeaderData.swift in Sources */,
 				D05326BF290D7B17004A7018 /* DishesView.swift in Sources */,
+				D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */,
+				D0B20B0A29106F3000F29546 /* RipeningView.swift in Sources */,
 				D05326C7290E9CBF004A7018 /* FactModel.swift in Sources */,
 				D05326C3290E97D0004A7018 /* FactsView.swift in Sources */,
 				D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */,
 				D05326CD290EABC1004A7018 /* RecipeData.swift in Sources */,
 				D05326B9290D6779004A7018 /* HeaderView.swift in Sources */,
+				D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */,
 				D05326C9290E9CFC004A7018 /* FactData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,66 @@
 import SwiftUI
 
 struct SettingsView: View {
+//    properties
+    @State private var enableNotification: Bool = true
+    @State private var backgroundRefresh: Bool = false
+    
     var body: some View {
-        Text("settings")
+        VStack(alignment: .center, spacing: 0) {
+//            header
+            
+            VStack(alignment: .center, spacing: 5) {
+                Image("avocado")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.top)
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 8, x: 0, y:4)
+                
+                Text("avocados".uppercased())
+                    .font(.system(.title, design:.serif))
+                    .fontWeight(.bold)
+                .foregroundColor(Color("ColorGreenAdaptive"))
+            }
+            .padding()
+            
+            Form {
+//                section 1
+                Section(header: Text("general settings")) {
+                    Toggle(isOn: $enableNotification) {
+                        Text("enable notifications")
+                    }
+                    
+                    Toggle(isOn: $backgroundRefresh) {
+                        Text("background refresh")
+                    }
+                }
+                
+//                section 2
+                Section(header: Text("about")) {
+                    HStack{
+                        Text("name").foregroundColor(Color.gray)
+                        Spacer()
+                        Text("furasta")
+                        
+                    }
+                    HStack{
+                        Text("developer").foregroundColor(Color.gray)
+                        Spacer()
+                        Text("justin reid")
+                        
+                    }
+                    HStack{
+                        Text("site").foregroundColor(Color.gray)
+                        Spacer()
+                        Text("justinre.id")
+                        
+                    }
+                }
+                
+            }
+        }
+        .frame(maxWidth: 640)
     }
 }
 
