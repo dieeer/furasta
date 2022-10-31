@@ -23,18 +23,34 @@ struct RecipeDetailView: View {
                     .scaledToFit()
                 
                 Group {
-//                    title
+                    //                    title
                     Text(recipe.title)
                         .font(.system(.largeTitle, design: .serif))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.top, 10)
-//                    rating
+                    //                    rating
                     RecipeRatingView(recipe: recipe)
-//                    cooking
+                    //                    cooking
                     RecipeCookingView(recipe: recipe)
-//                    ingredients
+                    //                    start recipe button
+                    Button("start recipe") {
+                        false
+                    }.foregroundColor(Color.white)
+                        .font(.system(.title3))
+                        .fontWeight(.bold)
+                        .shadow(radius: 3)
+                        .padding(.vertical)
+                        .padding(.horizontal, 0)
+                        .frame(width: 250)
+                        .background(
+                        RoundedRectangle(cornerRadius: 64)
+                            .fill(Color("ColorGreenMedium"))
+                            .shadow(color: Color("ColorBlackTransparentLight"), radius: 6, x: 0, y: 6)
+                        )
+
+                    //                    ingredients
                     Text("ingredients")
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
@@ -50,26 +66,7 @@ struct RecipeDetailView: View {
                             }
                         }
                     }
-//                    instructions
-                    Text("method")
-                        .fontWeight(.bold)
-                        .modifier(TitleModifier())
-                    ForEach(recipe.instructions, id: \.self) { item in
-                        VStack(alignment: .center, spacing: 5) {
-                            Image(systemName: "chevron.down.circle")
-                                .resizable()
-                                .frame(width: 42, height: 42, alignment: .center)
-                                .imageScale(.large)
-                                .font(Font.title.weight(.ultraLight))
-                                .foregroundColor(Color("ColorGreenAdaptive"))
-                            Text(item)
-                                .lineLimit(nil)
-                                .multilineTextAlignment(.center)
-                                .font(.system(.body, design: .serif))
-                                .frame(minHeight: 100)
-                            Divider()
-                        }
-                    }
+                    
                     
                 }
                 .padding(.horizontal, 24)
@@ -84,7 +81,7 @@ struct RecipeDetailView: View {
                 VStack {
                     Spacer()
                     Button(action: {
-        //                action
+                        //                action
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Image(systemName: "chevron.down.circle.fill")
@@ -105,7 +102,7 @@ struct RecipeDetailView: View {
         .onAppear() {
             self.pulsate.toggle()
         }
-        
+    
     }
 }
 

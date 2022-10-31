@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D05326AC290D5CDF004A7018 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05326AB290D5CDF004A7018 /* Launch Screen.storyboard */; };
 		D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B0290D5DBC004A7018 /* FurastaView.swift */; };
 		D05326B3290D5DDD004A7018 /* RipeningStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B2290D5DDD004A7018 /* RipeningStagesView.swift */; };
 		D05326B5290D5DEB004A7018 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B4290D5DEB004A7018 /* SettingsView.swift */; };
@@ -32,10 +31,10 @@
 		D0B20B0A29106F3000F29546 /* RipeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0929106F3000F29546 /* RipeningView.swift */; };
 		D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0B2910757300F29546 /* RipeningModel.swift */; };
 		D0B20B0E291075B500F29546 /* RipeningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0D291075B500F29546 /* RipeningData.swift */; };
+		D0B20B1029108D4900F29546 /* LoadingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0F29108D4900F29546 /* LoadingRectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D05326AB290D5CDF004A7018 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D05326B0290D5DBC004A7018 /* FurastaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurastaView.swift; sourceTree = "<group>"; };
 		D05326B2290D5DDD004A7018 /* RipeningStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStagesView.swift; sourceTree = "<group>"; };
 		D05326B4290D5DEB004A7018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		D0B20B0929106F3000F29546 /* RipeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningView.swift; sourceTree = "<group>"; };
 		D0B20B0B2910757300F29546 /* RipeningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningModel.swift; sourceTree = "<group>"; };
 		D0B20B0D291075B500F29546 /* RipeningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningData.swift; sourceTree = "<group>"; };
+		D0B20B0F29108D4900F29546 /* LoadingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,7 @@
 			children = (
 				D0B20B03290ECF1600F29546 /* RecipeRatingView.swift */,
 				D09E271C290D532D00CF4C86 /* ContentView.swift */,
+				D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */,
 				D05326B0290D5DBC004A7018 /* FurastaView.swift */,
 				D05326B2290D5DDD004A7018 /* RipeningStagesView.swift */,
 				D05326B4290D5DEB004A7018 /* SettingsView.swift */,
@@ -111,6 +112,7 @@
 				D05326CE290EAC32004A7018 /* RecipeCardView.swift */,
 				D0B20B07290ED07900F29546 /* RecipeDetailView.swift */,
 				D0B20B0929106F3000F29546 /* RipeningView.swift */,
+				D0B20B0F29108D4900F29546 /* LoadingRectangle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,7 +120,6 @@
 		D09E270E290D532D00CF4C86 = {
 			isa = PBXGroup;
 			children = (
-				D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */,
 				D09E2719290D532D00CF4C86 /* furasta */,
 				D09E2718290D532D00CF4C86 /* Products */,
 			);
@@ -139,7 +140,6 @@
 				D05326AE290D5D72004A7018 /* Model */,
 				D05326AD290D5D68004A7018 /* Data */,
 				D09E271A290D532D00CF4C86 /* furastaApp.swift */,
-				D05326AB290D5CDF004A7018 /* Launch Screen.storyboard */,
 				D09E271E290D533000CF4C86 /* Assets.xcassets */,
 				D09E2720290D533000CF4C86 /* Preview Content */,
 			);
@@ -212,7 +212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D05326AC290D5CDF004A7018 /* Launch Screen.storyboard in Resources */,
 				D09E2722290D533000CF4C86 /* Preview Assets.xcassets in Resources */,
 				D09E271F290D533000CF4C86 /* Assets.xcassets in Resources */,
 			);
@@ -227,6 +226,7 @@
 			files = (
 				D05326B5290D5DEB004A7018 /* SettingsView.swift in Sources */,
 				D0B20B04290ECF1600F29546 /* RecipeRatingView.swift in Sources */,
+				D0B20B1029108D4900F29546 /* LoadingRectangle.swift in Sources */,
 				D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */,
 				D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */,
 				D05326B7290D5E04004A7018 /* AppView.swift in Sources */,
@@ -378,6 +378,8 @@
 				DEVELOPMENT_TEAM = FK5D28BR3X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = furasta;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +410,8 @@
 				DEVELOPMENT_TEAM = FK5D28BR3X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = furasta;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

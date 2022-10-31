@@ -18,7 +18,7 @@ struct RecipeCardView: View {
         VStack(alignment: .leading, spacing: 0) {
                 Image(recipe.image)
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .overlay(
                         HStack {
                             Spacer()

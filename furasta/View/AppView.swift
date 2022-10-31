@@ -12,18 +12,13 @@ struct AppView: View {
         TabView{
             FurastaView()
                 .tabItem({
-                    Image("tabicon-branch")
-                    Text("avocados")
+                    Image(systemName: "house")
+                    Text("home")
                 })
             ContentView()
                 .tabItem({
                     Image("tabicon-book")
                     Text("recipes")
-                })
-            RipeningStagesView()
-                .tabItem({
-                    Image("tabicon-avocado")
-                    Text("ripening")
                 })
             SettingsView()
                 .tabItem({

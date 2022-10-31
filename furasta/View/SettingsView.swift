@@ -17,14 +17,8 @@ struct SettingsView: View {
 //            header
             
             VStack(alignment: .center, spacing: 5) {
-                Image("avocado")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.top)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 8, x: 0, y:4)
                 
-                Text("avocados".uppercased())
+                Text("furasta")
                     .font(.system(.title, design:.serif))
                     .fontWeight(.bold)
                 .foregroundColor(Color("ColorGreenAdaptive"))

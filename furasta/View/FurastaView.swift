@@ -20,30 +20,25 @@ struct FurastaView: View {
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
             }
-            ScrollView(.vertical, showsIndicators: false) {
+            ScrollView{
                 
-                
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("recipes")
-                        .fontWeight(.bold)
-                        .modifier(TitleModifier())
-                    
-                    VStack(alignment: .center, spacing: 20){
-                        ForEach(recipes) {
-                            item in
-                            RecipeCardView(recipe: item)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("recipes")
+                            .fontWeight(.bold)
+                            .modifier(TitleModifier())
+                        
+                        VStack(alignment: .center, spacing: 20){
+                            ForEach(recipes) {
+                                item in
+                                RecipeCardView(recipe: item)
+                            }
                         }
+                        .frame(maxWidth: 640)
+                        .padding(.horizontal)
+                        
                     }
-                    .frame(maxWidth: 640)
-                    .padding(.horizontal)
-                    
-                    
-                    
                 }
-                
             }
-            
-        }
     }
     
 }
