@@ -20,6 +20,11 @@ struct AppView: View {
                     Image("tabicon-settings")
                     Text("settings")
                 })
+            ProfileView()
+                .tabItem({
+                    Image(systemName: "person.fill")
+                    Text("profile")
+                })
         }
         .edgesIgnoringSafeArea(.top)
         .accentColor(Color.primary)

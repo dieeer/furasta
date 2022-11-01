@@ -21,6 +21,7 @@ struct RecipeCookingView: View {
                     .foregroundColor(Color("ColorGreenMedium"))
                     .font(.title)
                 Text("serves \(recipe.serves)")
+                    .foregroundColor(Color("ColorGreenAdaptive"))
             }
             Spacer()
             Divider()
@@ -30,6 +31,7 @@ struct RecipeCookingView: View {
                     .foregroundColor(Color("ColorGreenMedium"))
                     .font(.title)
                 Text("\(recipe.preparation) minutes")
+                    .foregroundColor(Color("ColorGreenAdaptive"))
             }
             
         }
