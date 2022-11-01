@@ -13,7 +13,7 @@ struct RecipeDetailView: View {
     var recipe: Recipe
     
     @State private var pulsate: Bool = false
-    @State private var showModal: Bool = false
+    @State private var showFullScreen: Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -37,7 +37,11 @@ struct RecipeDetailView: View {
                     RecipeCookingView(recipe: recipe)
                     //                    start recipe button
                     Button("start recipe") {
-                        false
+                    }.onTapGesture {
+                        self.showFullScreen = true
+                    }
+                    .fullScreenCover(isPresented: self.$showFullScreen){
+                        RecipeStoryView()
                     }
     
                     .foregroundColor(Color.white)

@@ -34,6 +34,8 @@
 		D0B20B0E291075B500F29546 /* RipeningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0D291075B500F29546 /* RipeningData.swift */; };
 		D0EA6F5B291149670039507F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5A291149660039507F /* ProfileView.swift */; };
 		D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5C291149D90039507F /* ProfileCardView.swift */; };
+		D0EA6F5F291175090039507F /* LoadingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5E291175090039507F /* LoadingRectangle.swift */; };
+		D0EA6F612911754D0039507F /* RecipeStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F602911754D0039507F /* RecipeStoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		D0B20B0D291075B500F29546 /* RipeningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningData.swift; sourceTree = "<group>"; };
 		D0EA6F5A291149660039507F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D0EA6F5C291149D90039507F /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
+		D0EA6F5E291175090039507F /* LoadingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRectangle.swift; sourceTree = "<group>"; };
+		D0EA6F602911754D0039507F /* RecipeStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				D0B20B0929106F3000F29546 /* RipeningView.swift */,
 				D0EA6F5A291149660039507F /* ProfileView.swift */,
 				D0EA6F5C291149D90039507F /* ProfileCardView.swift */,
+				D0EA6F5E291175090039507F /* LoadingRectangle.swift */,
+				D0EA6F602911754D0039507F /* RecipeStoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 				D05326B7290D5E04004A7018 /* AppView.swift in Sources */,
 				D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */,
 				D0B20B0E291075B500F29546 /* RipeningData.swift in Sources */,
+				D0EA6F612911754D0039507F /* RecipeStoryView.swift in Sources */,
 				D05326B3290D5DDD004A7018 /* RipeningStagesView.swift in Sources */,
 				D09E271D290D532D00CF4C86 /* ContentView.swift in Sources */,
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
@@ -248,6 +255,7 @@
 				D0B20B0A29106F3000F29546 /* RipeningView.swift in Sources */,
 				D05326C7290E9CBF004A7018 /* FactModel.swift in Sources */,
 				D0EA6F5B291149670039507F /* ProfileView.swift in Sources */,
+				D0EA6F5F291175090039507F /* LoadingRectangle.swift in Sources */,
 				D05326C3290E97D0004A7018 /* FactsView.swift in Sources */,
 				D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */,
 				D05326CD290EABC1004A7018 /* RecipeData.swift in Sources */,

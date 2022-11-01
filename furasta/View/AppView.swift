@@ -25,6 +25,11 @@ struct AppView: View {
                     Image(systemName: "person.fill")
                     Text("profile")
                 })
+            RecipeStoryView()
+                .tabItem({
+                    Image(systemName: "reel")
+                    Text("story test")
+                })
         }
         .edgesIgnoringSafeArea(.top)
         .accentColor(Color.primary)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoadingRectangle: View {
+    
     var progress: CGFloat
     
     var body: some View {
@@ -23,8 +24,7 @@ struct LoadingRectangle: View {
                     .cornerRadius(5)
             }
         }
-    }
-}
+    }}
 
 struct LoadingRectangle_Previews: PreviewProvider {
     static var previews: some View {
