@@ -15,11 +15,6 @@ struct AppView: View {
                     Image(systemName: "house")
                     Text("home")
                 })
-            ContentView()
-                .tabItem({
-                    Image("tabicon-book")
-                    Text("recipes")
-                })
             SettingsView()
                 .tabItem({
                     Image("tabicon-settings")

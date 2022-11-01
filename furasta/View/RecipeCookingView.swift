@@ -19,6 +19,7 @@ struct RecipeCookingView: View {
             HStack(alignment: .center, spacing: 2) {
                 Image(systemName: "person.2.fill")
                     .foregroundColor(Color("ColorGreenMedium"))
+                    .font(.title)
                 Text("serves \(recipe.serves)")
             }
             Spacer()
@@ -27,6 +28,7 @@ struct RecipeCookingView: View {
             HStack(alignment: .center, spacing: 2) {
                 Image(systemName: "clock.fill")
                     .foregroundColor(Color("ColorGreenMedium"))
+                    .font(.title)
                 Text("\(recipe.preparation) minutes")
             }
             

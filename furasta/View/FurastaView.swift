@@ -15,10 +15,11 @@ struct FurastaView: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .center, spacing: 0) {
                 Text("furasta")
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
+                    .padding(.all)
             }
             ScrollView{
                 
@@ -26,6 +27,7 @@ struct FurastaView: View {
                         Text("recipes")
                             .fontWeight(.bold)
                             .modifier(TitleModifier())
+                            .padding(.leading, 10)
                         
                         VStack(alignment: .center, spacing: 20){
                             ForEach(recipes) {

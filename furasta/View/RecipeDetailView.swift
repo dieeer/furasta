@@ -13,6 +13,7 @@ struct RecipeDetailView: View {
     var recipe: Recipe
     
     @State private var pulsate: Bool = false
+    @State private var showModal: Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -37,7 +38,9 @@ struct RecipeDetailView: View {
                     //                    start recipe button
                     Button("start recipe") {
                         false
-                    }.foregroundColor(Color.white)
+                    }
+    
+                    .foregroundColor(Color.white)
                         .font(.system(.title3))
                         .fontWeight(.bold)
                         .shadow(radius: 3)
@@ -79,7 +82,6 @@ struct RecipeDetailView: View {
             HStack {
                 Spacer()
                 VStack {
-                    Spacer()
                     Button(action: {
                         //                action
                         self.presentationMode.wrappedValue.dismiss()
@@ -89,8 +91,6 @@ struct RecipeDetailView: View {
                             .foregroundColor(Color.white)
                             .shadow(radius: 4)
                             .opacity(self.pulsate ? 1 : 0.6)
-                            .scaleEffect(self.pulsate ? 1.2 : 0.8, anchor: .center)
-                            .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
                         
                     })
                     .padding(.trailing, 20)
@@ -101,7 +101,11 @@ struct RecipeDetailView: View {
         )
         .onAppear() {
             self.pulsate.toggle()
+                
         }
+//        .sheet(isPresented: self.$showModal){
+//            RecipePlayView()
+//        }
     
     }
 }

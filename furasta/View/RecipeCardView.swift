@@ -53,7 +53,7 @@ struct RecipeCardView: View {
 //
             }
             .padding()
-            .padding(.bottom, 12)
+            .padding(.bottom, 0)
         }
         .background(Color.white)
         .cornerRadius(12)
