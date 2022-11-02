@@ -15,7 +15,7 @@ struct RecipeRatingView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 5) {
             ForEach(1...(recipe.rating), id: \.self) { _ in
-                Image(systemName: "leaf.fill")
+                Image(systemName: "star.circle")
                     .font(.title)
                     .foregroundColor(Color("ColorGreenLight"))
             }

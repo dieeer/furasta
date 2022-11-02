@@ -11,7 +11,7 @@ struct RecipeDetailView: View {
     //    properties
     
     var recipe: Recipe
-    
+
     @State private var pulsate: Bool = false
     @Environment(\.presentationMode) var presentationMode
     
@@ -36,10 +36,6 @@ struct RecipeDetailView: View {
                     RecipeRatingView(recipe: recipe)
                     //                    cooking
                     RecipeCookingView(recipe: recipe)
-                  
-                    Button("start recipe") {
-
-                    }.modifier(buttonModifier())
 
 
 
@@ -47,7 +43,7 @@ struct RecipeDetailView: View {
                     Text("ingredients")
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
-                    
+
                     VStack(alignment: .leading, spacing: 5) {
                         ForEach(recipe.ingredients, id: \.self) {
                             item in
@@ -59,8 +55,8 @@ struct RecipeDetailView: View {
                             }
                         }
                     }
-                    
-                    
+
+
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
@@ -91,7 +87,7 @@ struct RecipeDetailView: View {
         )
         .onAppear() {
             self.pulsate.toggle()
-                
+
         }
 
     

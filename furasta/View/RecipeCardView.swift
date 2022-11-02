@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+
 struct RecipeCardView: View {
 //    properties
     
     var recipe: Recipe
     var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
     @State private var showModal: Bool = false
+    @State private var showMethodModal: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -47,8 +49,6 @@ struct RecipeCardView: View {
                     .foregroundColor(Color.gray)
                     .italic()
 //                rates
-                RecipeRatingView(recipe: recipe)
-//                cooking
                 RecipeCookingView(recipe: recipe)
 //
             }
@@ -64,7 +64,17 @@ struct RecipeCardView: View {
         }
         .sheet(isPresented: self.$showModal){
             RecipeDetailView(recipe: self.recipe)
-        }    }
+            Button("start recipe") {
+                showMethodModal = true
+            }.background(Color.white).opacity(0.5)
+            .modifier(TitleModifier())
+            .sheet(isPresented: $showMethodModal){
+                MethodView(recipe: self.recipe)
+            }
+        }
+                
+        
+    }
 }
 
 struct RecipeCardView_Previews: PreviewProvider {

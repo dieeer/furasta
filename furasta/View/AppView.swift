@@ -25,11 +25,7 @@ struct AppView: View {
                     Image(systemName: "person.fill")
                     Text("profile")
                 })
-            MethodView(recipe: recipesData[0])
-                .tabItem({
-                    Image(systemName: "film")
-                    Text("test")
-                })
+
             
 
         }
