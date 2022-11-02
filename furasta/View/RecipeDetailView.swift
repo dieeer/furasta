@@ -13,7 +13,6 @@ struct RecipeDetailView: View {
     var recipe: Recipe
     
     @State private var pulsate: Bool = false
-    @State private var showFullScreen: Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -31,31 +30,18 @@ struct RecipeDetailView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.top, 10)
+//                    tagline
+                    Text(recipe.headline)
                     //                    rating
                     RecipeRatingView(recipe: recipe)
                     //                    cooking
                     RecipeCookingView(recipe: recipe)
-                    //                    start recipe button
+                  
                     Button("start recipe") {
-                    }.onTapGesture {
-                        self.showFullScreen = true
-                    }
-                    .fullScreenCover(isPresented: self.$showFullScreen){
-                        RecipeStoryView()
-                    }
-    
-                    .foregroundColor(Color.white)
-                        .font(.system(.title3))
-                        .fontWeight(.bold)
-                        .shadow(radius: 3)
-                        .padding(.vertical)
-                        .padding(.horizontal, 0)
-                        .frame(width: 250)
-                        .background(
-                        RoundedRectangle(cornerRadius: 64)
-                            .fill(Color("ColorGreenMedium"))
-                            .shadow(color: Color("ColorBlackTransparentLight"), radius: 6, x: 0, y: 6)
-                        )
+
+                    }.modifier(buttonModifier())
+
+
 
                     //                    ingredients
                     Text("ingredients")
@@ -107,9 +93,7 @@ struct RecipeDetailView: View {
             self.pulsate.toggle()
                 
         }
-//        .sheet(isPresented: self.$showModal){
-//            RecipePlayView()
-//        }
+
     
     }
 }
@@ -119,4 +103,22 @@ struct RecipeDetailView_Previews: PreviewProvider {
         RecipeDetailView(recipe: recipesData[0])
     }
     
+}
+
+struct buttonModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(Color.white)
+            .font(.system(.title3))
+            .fontWeight(.bold)
+            .shadow(radius: 3)
+            .padding(.vertical)
+            .padding(.horizontal, 0)
+            .frame(width: 250)
+            .background(
+                RoundedRectangle(cornerRadius: 64)
+                    .fill(Color("ColorGreenMedium"))
+                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 6, x: 0, y: 6)
+            )
+    }
 }

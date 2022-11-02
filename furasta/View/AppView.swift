@@ -17,7 +17,7 @@ struct AppView: View {
                 })
             SettingsView()
                 .tabItem({
-                    Image("tabicon-settings")
+                    Image(systemName: "dial.high")
                     Text("settings")
                 })
             ProfileView()
@@ -25,11 +25,13 @@ struct AppView: View {
                     Image(systemName: "person.fill")
                     Text("profile")
                 })
-            RecipeStoryView()
+            MethodView(recipe: recipesData[0])
                 .tabItem({
-                    Image(systemName: "reel")
-                    Text("story test")
+                    Image(systemName: "film")
+                    Text("test")
                 })
+            
+
         }
         .edgesIgnoringSafeArea(.top)
         .accentColor(Color.primary)
