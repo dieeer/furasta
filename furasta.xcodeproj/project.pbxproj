@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235A892F06345CEFC0286D37 /* Pods_furasta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */; };
 		D0444B302911F95C00E0ED45 /* StoryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B2F2911F95C00E0ED45 /* StoryBundle.swift */; };
 		D0444B352911FA5100E0ED45 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B342911FA5100E0ED45 /* StoryViewModel.swift */; };
 		D0444B372912049400E0ED45 /* MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B362912049400E0ED45 /* MethodView.swift */; };
@@ -32,11 +33,15 @@
 		D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */; };
 		D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B07290ED07900F29546 /* RecipeDetailView.swift */; };
 		D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0B2910757300F29546 /* RipeningModel.swift */; };
+		D0D770552912C74000A844BC /* DB_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D770542912C74000A844BC /* DB_Manager.swift */; };
 		D0EA6F5B291149670039507F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5A291149660039507F /* ProfileView.swift */; };
 		D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5C291149D90039507F /* ProfileCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E08906519ED8530E8C33AE2 /* Pods-furasta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-furasta.release.xcconfig"; path = "Target Support Files/Pods-furasta/Pods-furasta.release.xcconfig"; sourceTree = "<group>"; };
+		BDF04336BF7401A262264C35 /* Pods-furasta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-furasta.debug.xcconfig"; path = "Target Support Files/Pods-furasta/Pods-furasta.debug.xcconfig"; sourceTree = "<group>"; };
+		CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_furasta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0444B2F2911F95C00E0ED45 /* StoryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBundle.swift; sourceTree = "<group>"; };
 		D0444B342911FA5100E0ED45 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 		D0444B362912049400E0ED45 /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCookingView.swift; sourceTree = "<group>"; };
 		D0B20B07290ED07900F29546 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		D0B20B0B2910757300F29546 /* RipeningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningModel.swift; sourceTree = "<group>"; };
+		D0D770542912C74000A844BC /* DB_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Manager.swift; sourceTree = "<group>"; };
 		D0EA6F5A291149660039507F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D0EA6F5C291149D90039507F /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,12 +78,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0444B3C29120D1A00E0ED45 /* SnapToScroll in Frameworks */,
+				235A892F06345CEFC0286D37 /* Pods_furasta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BEB3395C131F6E131C6316C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0444B312911F97D00E0ED45 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,8 @@
 			children = (
 				D09E2719290D532D00CF4C86 /* furasta */,
 				D09E2718290D532D00CF4C86 /* Products */,
+				D168291D9B8529B83BB95AB5 /* Pods */,
+				6BEB3395C131F6E131C6316C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +172,7 @@
 				D09E271A290D532D00CF4C86 /* furastaApp.swift */,
 				D09E271E290D533000CF4C86 /* Assets.xcassets */,
 				D09E2720290D533000CF4C86 /* Preview Content */,
+				D0D770542912C74000A844BC /* DB_Manager.swift */,
 			);
 			path = furasta;
 			sourceTree = "<group>";
@@ -167,6 +185,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D168291D9B8529B83BB95AB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDF04336BF7401A262264C35 /* Pods-furasta.debug.xcconfig */,
+				3E08906519ED8530E8C33AE2 /* Pods-furasta.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D09E2725290D533000CF4C86 /* Build configuration list for PBXNativeTarget "furasta" */;
 			buildPhases = (
+				C6422552097B8D0E372238BA /* [CP] Check Pods Manifest.lock */,
 				D09E2713290D532D00CF4C86 /* Sources */,
 				D09E2714290D532D00CF4C86 /* Frameworks */,
 				D09E2715290D532D00CF4C86 /* Resources */,
+				320F4E10420920D65DB7FB31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +267,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		320F4E10420920D65DB7FB31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-furasta/Pods-furasta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-furasta/Pods-furasta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-furasta/Pods-furasta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6422552097B8D0E372238BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-furasta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D09E2713290D532D00CF4C86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -249,6 +320,7 @@
 				D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */,
 				D05326B7290D5E04004A7018 /* AppView.swift in Sources */,
 				D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */,
+				D0D770552912C74000A844BC /* DB_Manager.swift in Sources */,
 				D09E271D290D532D00CF4C86 /* ContentView.swift in Sources */,
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
 				D05326BB290D70F3004A7018 /* HeaderModel.swift in Sources */,
@@ -389,6 +461,7 @@
 		};
 		D09E2726290D533000CF4C86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDF04336BF7401A262264C35 /* Pods-furasta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +495,7 @@
 		};
 		D09E2727290D533000CF4C86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E08906519ED8530E8C33AE2 /* Pods-furasta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

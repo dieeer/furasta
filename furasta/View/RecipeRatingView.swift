@@ -17,7 +17,7 @@ struct RecipeRatingView: View {
             ForEach(1...(recipe.rating), id: \.self) { _ in
                 Image(systemName: "star.circle")
                     .font(.title)
-                    .foregroundColor(Color("ColorGreenLight"))
+                    .foregroundColor(Color("ColorTextAdaptive"))
             }
         }    }
 }

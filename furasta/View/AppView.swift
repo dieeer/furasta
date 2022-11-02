@@ -30,7 +30,7 @@ struct AppView: View {
 
         }
         .edgesIgnoringSafeArea(.top)
-        .accentColor(Color.primary)
+        .accentColor(Color("ColorTextAdaptive"))
     }
 }
 

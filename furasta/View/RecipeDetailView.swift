@@ -28,7 +28,7 @@ struct RecipeDetailView: View {
                         .font(.system(.largeTitle, design: .serif))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color("ColorGreenAdaptive"))
+                        .foregroundColor(Color("ColorTextAdaptive"))
                         .padding(.top, 10)
 //                    tagline
                     Text(recipe.headline)
@@ -42,6 +42,7 @@ struct RecipeDetailView: View {
                     //                    ingredients
                     Text("ingredients")
                         .fontWeight(.bold)
+                        .foregroundColor(Color("ColorTextAdaptive"))
                         .modifier(TitleModifier())
 
                     VStack(alignment: .leading, spacing: 5) {
@@ -88,7 +89,7 @@ struct RecipeDetailView: View {
         .onAppear() {
             self.pulsate.toggle()
 
-        }
+        }.background(Color("ColorApperanceAdaptive"))
 
     
     }
@@ -113,7 +114,7 @@ struct buttonModifier: ViewModifier {
             .frame(width: 250)
             .background(
                 RoundedRectangle(cornerRadius: 64)
-                    .fill(Color("ColorGreenMedium"))
+                    .fill(Color("ColorAppearanceAdaptive"))
                     .shadow(color: Color("ColorBlackTransparentLight"), radius: 6, x: 0, y: 6)
             )
     }

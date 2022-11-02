@@ -20,12 +20,14 @@ struct FurastaView: View {
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
                     .padding(.all)
+                    .foregroundColor(Color("ColorTextAdaptive"))
             }
             ScrollView{
                 
                     VStack(alignment: .leading, spacing: 5) {
                         Text("recipes")
                             .fontWeight(.bold)
+                            .foregroundColor(Color("ColorHeaderAdaptive"))
                             .modifier(TitleModifier())
                             .padding(.leading, 10)
                         
@@ -40,7 +42,7 @@ struct FurastaView: View {
                         
                     }
                 }
-            }
+        }.background(Color("ColorAppearanceAdaptive"))
     }
     
 }

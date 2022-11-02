@@ -41,7 +41,7 @@ struct RecipeCardView: View {
                 Text(recipe.title)
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("ColorGreenMedium"))
+                    .foregroundColor(Color("ColorTextAdaptive"))
                     .lineLimit(1)
 //                headline
                 Text(recipe.headline)
@@ -55,7 +55,7 @@ struct RecipeCardView: View {
             .padding()
             .padding(.bottom, 0)
         }
-        .background(Color.white)
+        .background(Color("ColorComponentAdaptive"))
         .cornerRadius(12)
         .shadow(color: Color("ColorBlackTransparentLight"), radius: 8, x: 0, y: 0)
         .onTapGesture {
@@ -64,9 +64,10 @@ struct RecipeCardView: View {
         }
         .sheet(isPresented: self.$showModal){
             RecipeDetailView(recipe: self.recipe)
-            Button("start recipe") {
+            Button("🍴 start recipe") {
                 showMethodModal = true
-            }.background(Color.white).opacity(0.5)
+            }.foregroundColor(Color("ColorTextAdaptive"))
+                .fontWeight(.bold)
             .modifier(TitleModifier())
             .sheet(isPresented: $showMethodModal){
                 MethodView(recipe: self.recipe)
