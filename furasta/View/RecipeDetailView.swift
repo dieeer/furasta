@@ -63,7 +63,7 @@ struct RecipeDetailView: View {
                 .padding(.vertical, 12)
                 
             }
-        }
+        }.background(Color("ColorApperanceAdaptive"))
         .edgesIgnoringSafeArea(.top)
         .overlay(
             HStack {
@@ -89,7 +89,7 @@ struct RecipeDetailView: View {
         .onAppear() {
             self.pulsate.toggle()
 
-        }.background(Color("ColorApperanceAdaptive"))
+        }
 
     
     }

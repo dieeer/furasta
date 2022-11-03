@@ -33,7 +33,7 @@
 		D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */; };
 		D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B07290ED07900F29546 /* RecipeDetailView.swift */; };
 		D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0B2910757300F29546 /* RipeningModel.swift */; };
-		D0D770552912C74000A844BC /* DB_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D770542912C74000A844BC /* DB_Manager.swift */; };
+		D0E22D992913ECE800479B57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E22D982913ECE800479B57 /* CoreDataStack.swift */; };
 		D0EA6F5B291149670039507F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5A291149660039507F /* ProfileView.swift */; };
 		D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5C291149D90039507F /* ProfileCardView.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,7 @@
 		D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCookingView.swift; sourceTree = "<group>"; };
 		D0B20B07290ED07900F29546 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		D0B20B0B2910757300F29546 /* RipeningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningModel.swift; sourceTree = "<group>"; };
-		D0D770542912C74000A844BC /* DB_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Manager.swift; sourceTree = "<group>"; };
+		D0E22D982913ECE800479B57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D0EA6F5A291149660039507F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D0EA6F5C291149D90039507F /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +165,7 @@
 		D09E2719290D532D00CF4C86 /* furasta */ = {
 			isa = PBXGroup;
 			children = (
+				D0E22D972913ECD600479B57 /* CoreData */,
 				D0444B312911F97D00E0ED45 /* ViewModel */,
 				D05326AF290D5D78004A7018 /* View */,
 				D05326AE290D5D72004A7018 /* Model */,
@@ -172,7 +173,6 @@
 				D09E271A290D532D00CF4C86 /* furastaApp.swift */,
 				D09E271E290D533000CF4C86 /* Assets.xcassets */,
 				D09E2720290D533000CF4C86 /* Preview Content */,
-				D0D770542912C74000A844BC /* DB_Manager.swift */,
 			);
 			path = furasta;
 			sourceTree = "<group>";
@@ -183,6 +183,14 @@
 				D09E2721290D533000CF4C86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0E22D972913ECD600479B57 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D0E22D982913ECE800479B57 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D168291D9B8529B83BB95AB5 /* Pods */ = {
@@ -320,7 +328,6 @@
 				D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */,
 				D05326B7290D5E04004A7018 /* AppView.swift in Sources */,
 				D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */,
-				D0D770552912C74000A844BC /* DB_Manager.swift in Sources */,
 				D09E271D290D532D00CF4C86 /* ContentView.swift in Sources */,
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
 				D05326BB290D70F3004A7018 /* HeaderModel.swift in Sources */,
@@ -334,6 +341,7 @@
 				D0444B302911F95C00E0ED45 /* StoryBundle.swift in Sources */,
 				D0444B372912049400E0ED45 /* MethodView.swift in Sources */,
 				D05326C3290E97D0004A7018 /* FactsView.swift in Sources */,
+				D0E22D992913ECE800479B57 /* CoreDataStack.swift in Sources */,
 				D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */,
 				D05326CD290EABC1004A7018 /* RecipeData.swift in Sources */,
 				D05326B9290D6779004A7018 /* HeaderView.swift in Sources */,
