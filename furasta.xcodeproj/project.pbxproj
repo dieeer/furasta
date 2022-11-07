@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		235A892F06345CEFC0286D37 /* Pods_furasta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */; };
 		D0444B302911F95C00E0ED45 /* StoryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B2F2911F95C00E0ED45 /* StoryBundle.swift */; };
-		D0444B352911FA5100E0ED45 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B342911FA5100E0ED45 /* StoryViewModel.swift */; };
 		D0444B372912049400E0ED45 /* MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B362912049400E0ED45 /* MethodView.swift */; };
 		D0444B3C29120D1A00E0ED45 /* SnapToScroll in Frameworks */ = {isa = PBXBuildFile; productRef = D0444B3B29120D1A00E0ED45 /* SnapToScroll */; };
 		D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B0290D5DBC004A7018 /* FurastaView.swift */; };
@@ -25,6 +24,7 @@
 		D05326CB290EAB50004A7018 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326CA290EAB50004A7018 /* RecipeModel.swift */; };
 		D05326CD290EABC1004A7018 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326CC290EABC1004A7018 /* RecipeData.swift */; };
 		D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326CE290EAC32004A7018 /* RecipeCardView.swift */; };
+		D090BBEE2919C3BC00A554EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */; };
 		D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E271A290D532D00CF4C86 /* furastaApp.swift */; };
 		D09E271D290D532D00CF4C86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E271C290D532D00CF4C86 /* ContentView.swift */; };
 		D09E271F290D533000CF4C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09E271E290D533000CF4C86 /* Assets.xcassets */; };
@@ -32,8 +32,6 @@
 		D0B20B04290ECF1600F29546 /* RecipeRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B03290ECF1600F29546 /* RecipeRatingView.swift */; };
 		D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */; };
 		D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B07290ED07900F29546 /* RecipeDetailView.swift */; };
-		D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B20B0B2910757300F29546 /* RipeningModel.swift */; };
-		D0E22D992913ECE800479B57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E22D982913ECE800479B57 /* CoreDataStack.swift */; };
 		D0EA6F5B291149670039507F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5A291149660039507F /* ProfileView.swift */; };
 		D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6F5C291149D90039507F /* ProfileCardView.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +41,6 @@
 		BDF04336BF7401A262264C35 /* Pods-furasta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-furasta.debug.xcconfig"; path = "Target Support Files/Pods-furasta/Pods-furasta.debug.xcconfig"; sourceTree = "<group>"; };
 		CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_furasta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0444B2F2911F95C00E0ED45 /* StoryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBundle.swift; sourceTree = "<group>"; };
-		D0444B342911FA5100E0ED45 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 		D0444B362912049400E0ED45 /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
 		D05326B0290D5DBC004A7018 /* FurastaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurastaView.swift; sourceTree = "<group>"; };
 		D05326B4290D5DEB004A7018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -58,6 +55,7 @@
 		D05326CA290EAB50004A7018 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D05326CC290EABC1004A7018 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		D05326CE290EAC32004A7018 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
+		D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D09E2717290D532D00CF4C86 /* furasta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = furasta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09E271A290D532D00CF4C86 /* furastaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = furastaApp.swift; sourceTree = "<group>"; };
 		D09E271C290D532D00CF4C86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,8 +64,6 @@
 		D0B20B03290ECF1600F29546 /* RecipeRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRatingView.swift; sourceTree = "<group>"; };
 		D0B20B05290ECF9000F29546 /* RecipeCookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCookingView.swift; sourceTree = "<group>"; };
 		D0B20B07290ED07900F29546 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
-		D0B20B0B2910757300F29546 /* RipeningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningModel.swift; sourceTree = "<group>"; };
-		D0E22D982913ECE800479B57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D0EA6F5A291149660039507F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D0EA6F5C291149D90039507F /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,14 +89,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D0444B312911F97D00E0ED45 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D0444B342911FA5100E0ED45 /* StoryViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		D05326AD290D5D68004A7018 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +105,6 @@
 				D05326BA290D70F3004A7018 /* HeaderModel.swift */,
 				D05326C6290E9CBF004A7018 /* FactModel.swift */,
 				D05326CA290EAB50004A7018 /* RecipeModel.swift */,
-				D0B20B0B2910757300F29546 /* RipeningModel.swift */,
 				D0444B2F2911F95C00E0ED45 /* StoryBundle.swift */,
 			);
 			path = Model;
@@ -165,8 +152,7 @@
 		D09E2719290D532D00CF4C86 /* furasta */ = {
 			isa = PBXGroup;
 			children = (
-				D0E22D972913ECD600479B57 /* CoreData */,
-				D0444B312911F97D00E0ED45 /* ViewModel */,
+				D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */,
 				D05326AF290D5D78004A7018 /* View */,
 				D05326AE290D5D72004A7018 /* Model */,
 				D05326AD290D5D68004A7018 /* Data */,
@@ -183,14 +169,6 @@
 				D09E2721290D533000CF4C86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D0E22D972913ECD600479B57 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				D0E22D982913ECE800479B57 /* CoreDataStack.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D168291D9B8529B83BB95AB5 /* Pods */ = {
@@ -270,6 +248,7 @@
 			files = (
 				D09E2722290D533000CF4C86 /* Preview Assets.xcassets in Resources */,
 				D09E271F290D533000CF4C86 /* Assets.xcassets in Resources */,
+				D090BBEE2919C3BC00A554EB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +303,6 @@
 			files = (
 				D05326B5290D5DEB004A7018 /* SettingsView.swift in Sources */,
 				D0B20B04290ECF1600F29546 /* RecipeRatingView.swift in Sources */,
-				D0B20B0C2910757300F29546 /* RipeningModel.swift in Sources */,
 				D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */,
 				D05326B7290D5E04004A7018 /* AppView.swift in Sources */,
 				D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */,
@@ -337,11 +315,9 @@
 				D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */,
 				D05326C7290E9CBF004A7018 /* FactModel.swift in Sources */,
 				D0EA6F5B291149670039507F /* ProfileView.swift in Sources */,
-				D0444B352911FA5100E0ED45 /* StoryViewModel.swift in Sources */,
 				D0444B302911F95C00E0ED45 /* StoryBundle.swift in Sources */,
 				D0444B372912049400E0ED45 /* MethodView.swift in Sources */,
 				D05326C3290E97D0004A7018 /* FactsView.swift in Sources */,
-				D0E22D992913ECE800479B57 /* CoreDataStack.swift in Sources */,
 				D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */,
 				D05326CD290EABC1004A7018 /* RecipeData.swift in Sources */,
 				D05326B9290D6779004A7018 /* HeaderView.swift in Sources */,

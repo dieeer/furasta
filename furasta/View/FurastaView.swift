@@ -27,7 +27,7 @@ struct FurastaView: View {
                     VStack(alignment: .leading, spacing: 5) {
                         Text("recipes")
                             .fontWeight(.bold)
-                            .foregroundColor(Color("ColorHeaderAdaptive"))
+                            .foregroundColor(Color("ColorGreenAdaptive"))
                             .modifier(TitleModifier())
                             .padding(.leading, 10)
                         

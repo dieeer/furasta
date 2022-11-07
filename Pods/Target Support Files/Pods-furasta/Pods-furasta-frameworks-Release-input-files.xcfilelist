@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-furasta/Pods-furasta-frameworks.sh
-${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework

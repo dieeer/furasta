@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-u@main
+@main
 struct furastaApp: App {
     var body: some Scene {
         WindowGroup {

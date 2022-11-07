@@ -4,7 +4,7 @@
 target 'furasta' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
   
-    pod 'SQLite.swift', '~> 0.14.0'
-
 end

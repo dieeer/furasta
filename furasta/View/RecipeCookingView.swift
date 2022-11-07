@@ -18,25 +18,29 @@ struct RecipeCookingView: View {
         HStack(alignment: .center, spacing: 12){
             HStack(alignment: .center, spacing: 2) {
                 Image(systemName: "person.2.fill")
+                    .scaledToFit()
                     .foregroundColor(Color("ColorTextAdaptive"))
                     
                 
                 Text("serves \(recipe.serves)")
-                    .foregroundColor(Color("ColorTextAdaptive"))
+                    .foregroundColor(Color("ColorGreenAdaptive"))
                     .font(.footnote)
                     .italic()
+                    .padding(.leading)
             }
             Spacer()
             Divider()
             Spacer()
             HStack(alignment: .center, spacing: 2) {
                 Image(systemName: "clock.fill")
+                    .scaledToFit()
                     .foregroundColor(Color("ColorTextAdaptive"))
                     
                 Text("\(recipe.preparation) minutes")
-                    .foregroundColor(Color("ColorTextAdaptive"))
+                    .foregroundColor(Color("ColorGreenAdaptive"))
                     .font(.footnote)
                     .italic()
+                    .padding(.leading)
             }
             
             

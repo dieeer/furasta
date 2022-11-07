@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct AppView: View {
+    
+    
     var body: some View {
         TabView{
             FurastaView()
@@ -32,6 +35,8 @@ struct AppView: View {
         .edgesIgnoringSafeArea(.top)
         .accentColor(Color("ColorTextAdaptive"))
     }
+    
+    
 }
 
 struct AppView_Previews: PreviewProvider {

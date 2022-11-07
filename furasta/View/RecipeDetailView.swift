@@ -13,23 +13,39 @@ struct RecipeDetailView: View {
     var recipe: Recipe
 
     @State private var pulsate: Bool = false
+    @State private var showMethodModal: Bool = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
+            
+            
             VStack(alignment: .center, spacing: 0) {
                 Image(recipe.image)
                     .resizable()
                     .scaledToFit()
                 
+                
+                
                 Group {
+                    
                     //                    title
                     Text(recipe.title)
                         .font(.system(.largeTitle, design: .serif))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color("ColorTextAdaptive"))
+                        .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.top, 10)
+//                    button
+                    ZStack(alignment: .bottom) {
+                        Button("🍴 start recipe") {
+                            showMethodModal = true
+                        }
+                        .modifier(buttonModifier())
+                        .sheet(isPresented: $showMethodModal){
+                            MethodView(recipe: self.recipe)
+                    }
+                    }
 //                    tagline
                     Text(recipe.headline)
                     //                    rating
@@ -42,7 +58,7 @@ struct RecipeDetailView: View {
                     //                    ingredients
                     Text("ingredients")
                         .fontWeight(.bold)
-                        .foregroundColor(Color("ColorTextAdaptive"))
+                        .foregroundColor(Color("ColorGreenAdaptive"))
                         .modifier(TitleModifier())
 
                     VStack(alignment: .leading, spacing: 5) {
@@ -57,13 +73,13 @@ struct RecipeDetailView: View {
                         }
                     }
 
-
+                    
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
                 
             }
-        }.background(Color("ColorApperanceAdaptive"))
+        }.background(Color("ColorAppearanceAdaptive"))
         .edgesIgnoringSafeArea(.top)
         .overlay(
             HStack {
@@ -105,7 +121,7 @@ struct RecipeDetailView_Previews: PreviewProvider {
 struct buttonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .foregroundColor(Color.white)
+            .foregroundColor(Color("ColorAppearanceAdaptive"))
             .font(.system(.title3))
             .fontWeight(.bold)
             .shadow(radius: 3)
@@ -114,8 +130,8 @@ struct buttonModifier: ViewModifier {
             .frame(width: 250)
             .background(
                 RoundedRectangle(cornerRadius: 64)
-                    .fill(Color("ColorAppearanceAdaptive"))
-                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 6, x: 0, y: 6)
+                    .fill(Color("ColorGreenAdaptive"))
+                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 4, x: 0, y: 4)
             )
     }
 }

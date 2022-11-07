@@ -14,7 +14,7 @@ struct RecipeCardView: View {
     var recipe: Recipe
     var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
     @State private var showModal: Bool = false
-    @State private var showMethodModal: Bool = false
+
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -41,7 +41,7 @@ struct RecipeCardView: View {
                 Text(recipe.title)
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("ColorTextAdaptive"))
+                    .foregroundColor(Color("ColorGreenAdaptive"))
                     .lineLimit(1)
 //                headline
                 Text(recipe.headline)
@@ -51,9 +51,11 @@ struct RecipeCardView: View {
 //                rates
                 RecipeCookingView(recipe: recipe)
 //
+                
             }
             .padding()
             .padding(.bottom, 0)
+            
         }
         .background(Color("ColorComponentAdaptive"))
         .cornerRadius(12)
@@ -64,14 +66,7 @@ struct RecipeCardView: View {
         }
         .sheet(isPresented: self.$showModal){
             RecipeDetailView(recipe: self.recipe)
-            Button("🍴 start recipe") {
-                showMethodModal = true
-            }.foregroundColor(Color("ColorTextAdaptive"))
-                .fontWeight(.bold)
-            .modifier(TitleModifier())
-            .sheet(isPresented: $showMethodModal){
-                MethodView(recipe: self.recipe)
-            }
+            
         }
                 
         
