@@ -29,6 +29,7 @@ struct FurastaView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.leading, 10)
+                        .modifier(niceTextModifier())
                     
                     VStack(alignment: .center, spacing: 20){
                         ForEach(model.list) {

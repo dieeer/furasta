@@ -450,6 +450,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"furasta/Preview Content\"";
 				DEVELOPMENT_TEAM = FK5D28BR3X;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = furasta;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";

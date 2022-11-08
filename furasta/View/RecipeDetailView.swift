@@ -59,6 +59,7 @@ struct RecipeDetailView: View {
                     Text("ingredients")
                         .fontWeight(.bold)
                         .foregroundColor(Color("ColorGreenAdaptive"))
+                        .modifier(niceTextModifier())
 
                     VStack(alignment: .leading, spacing: 5) {
                         ForEach(recipe.ingredients, id: \.self) {
@@ -92,7 +93,7 @@ struct RecipeDetailView: View {
                             .font(.title)
                             .foregroundColor(Color.white)
                             .shadow(radius: 4)
-                            .opacity(self.pulsate ? 1 : 0.6)
+                            .opacity(self.pulsate ? 1 : 0.2)
                         
                     })
                     .padding(.trailing, 20)
@@ -110,7 +111,6 @@ struct RecipeDetailView: View {
     }
 }
 
-
 struct buttonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -126,5 +126,16 @@ struct buttonModifier: ViewModifier {
                     .fill(Color("ColorGreenAdaptive"))
                     .shadow(color: Color("ColorBlackTransparentLight"), radius: 4, x: 0, y: 4)
             )
+    }
+}
+
+struct niceTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .fontWeight(.bold)
+            .shadow(radius: 2)
+            .padding()
+            .foregroundColor(Color("ColorTextAdaptive"))
     }
 }
