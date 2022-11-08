@@ -55,9 +55,5 @@ struct MethodView: View {
         )
     }
     
-    struct MethodView_Previews: PreviewProvider {
-        static var previews: some View {
-            MethodView(recipe: recipesData[0])
-        }
-    }
+   
 }

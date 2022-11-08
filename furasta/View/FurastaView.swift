@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FurastaView: View {
     //    MARK: - PROPERTIES
-    var recipes: [Recipe] = recipesData
+    @ObservedObject var model = RecipeViewModel()
     
     @State private var pulsateAnimation: Bool = false
     
@@ -24,31 +24,35 @@ struct FurastaView: View {
             }
             ScrollView{
                 
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("recipes")
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("ColorGreenAdaptive"))
-                            .modifier(TitleModifier())
-                            .padding(.leading, 10)
-                        
-                        VStack(alignment: .center, spacing: 20){
-                            ForEach(recipes) {
-                                item in
-                                RecipeCardView(recipe: item)
-                            }
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("recipes")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("ColorGreenAdaptive"))
+                        .padding(.leading, 10)
+                    
+                    VStack(alignment: .center, spacing: 20){
+                        ForEach(model.list) {
+                            item in
+                            RecipeCardView(recipe: item)
                         }
-                        .frame(maxWidth: 640)
-                        .padding(.horizontal)
-                        
                     }
+                    .frame(maxWidth: 640)
+                    .padding(.horizontal)
+                    
                 }
+            }
+            
+            
         }.background(Color("ColorAppearanceAdaptive"))
-    }
     
+    }
+    init() {
+        model.getData()
+    }
 }
 
 struct FurastaView_Previews: PreviewProvider {
     static var previews: some View {
-        FurastaView(recipes: recipesData)
+        FurastaView()
     }
 }

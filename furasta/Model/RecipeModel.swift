@@ -10,7 +10,7 @@ import SwiftUI
 //recipe model
 
 struct Recipe: Identifiable {
-    var id = UUID()
+    var id: String
     var title: String
     var headline: String
     var image: String

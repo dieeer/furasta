@@ -22,9 +22,4 @@ struct RecipeRatingView: View {
         }    }
 }
 
-struct RecipeRatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeRatingView(recipe: recipesData[0])
-            .previewLayout(.fixed(width: 320, height: 60))
-    }
-}
+

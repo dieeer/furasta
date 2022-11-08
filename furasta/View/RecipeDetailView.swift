@@ -59,7 +59,6 @@ struct RecipeDetailView: View {
                     Text("ingredients")
                         .fontWeight(.bold)
                         .foregroundColor(Color("ColorGreenAdaptive"))
-                        .modifier(TitleModifier())
 
                     VStack(alignment: .leading, spacing: 5) {
                         ForEach(recipe.ingredients, id: \.self) {
@@ -111,12 +110,6 @@ struct RecipeDetailView: View {
     }
 }
 
-struct RecipeDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeDetailView(recipe: recipesData[0])
-    }
-    
-}
 
 struct buttonModifier: ViewModifier {
     func body(content: Content) -> some View {

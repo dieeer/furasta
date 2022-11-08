@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
-
 // recipe data
 
 let recipesData: [Recipe] = [

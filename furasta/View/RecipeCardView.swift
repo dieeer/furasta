@@ -73,9 +73,3 @@ struct RecipeCardView: View {
     }
 }
 
-struct RecipeCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeCardView(recipe: recipesData[0])
-            .previewLayout(.sizeThatFits)
-    }
-}

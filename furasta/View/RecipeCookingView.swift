@@ -50,9 +50,4 @@ struct RecipeCookingView: View {
     }
 }
 
-struct RecipeCookingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecipeCookingView(recipe: recipesData[0])
-            .previewLayout(.fixed(width:320, height: 60))
-    }
-}
+
