@@ -14,13 +14,9 @@
 		D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B0290D5DBC004A7018 /* FurastaView.swift */; };
 		D05326B5290D5DEB004A7018 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B4290D5DEB004A7018 /* SettingsView.swift */; };
 		D05326B7290D5E04004A7018 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B6290D5E04004A7018 /* AppView.swift */; };
-		D05326B9290D6779004A7018 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B8290D6779004A7018 /* HeaderView.swift */; };
 		D05326BB290D70F3004A7018 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326BA290D70F3004A7018 /* HeaderModel.swift */; };
-		D05326BD290D713A004A7018 /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326BC290D713A004A7018 /* HeaderData.swift */; };
 		D05326BF290D7B17004A7018 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326BE290D7B17004A7018 /* DishesView.swift */; };
-		D05326C3290E97D0004A7018 /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326C2290E97D0004A7018 /* FactsView.swift */; };
 		D05326C7290E9CBF004A7018 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326C6290E9CBF004A7018 /* FactModel.swift */; };
-		D05326C9290E9CFC004A7018 /* FactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326C8290E9CFC004A7018 /* FactData.swift */; };
 		D05326CB290EAB50004A7018 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326CA290EAB50004A7018 /* RecipeModel.swift */; };
 		D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326CE290EAC32004A7018 /* RecipeCardView.swift */; };
 		D090BBEE2919C3BC00A554EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */; };
@@ -44,13 +40,9 @@
 		D05326B0290D5DBC004A7018 /* FurastaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurastaView.swift; sourceTree = "<group>"; };
 		D05326B4290D5DEB004A7018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D05326B6290D5E04004A7018 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
-		D05326B8290D6779004A7018 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D05326BA290D70F3004A7018 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
-		D05326BC290D713A004A7018 /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
 		D05326BE290D7B17004A7018 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
-		D05326C2290E97D0004A7018 /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
 		D05326C6290E9CBF004A7018 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
-		D05326C8290E9CFC004A7018 /* FactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactData.swift; sourceTree = "<group>"; };
 		D05326CA290EAB50004A7018 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D05326CE290EAC32004A7018 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -87,15 +79,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D05326AD290D5D68004A7018 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D05326BC290D713A004A7018 /* HeaderData.swift */,
-				D05326C8290E9CFC004A7018 /* FactData.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		D05326AE290D5D72004A7018 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +99,7 @@
 				D05326B0290D5DBC004A7018 /* FurastaView.swift */,
 				D05326B4290D5DEB004A7018 /* SettingsView.swift */,
 				D05326B6290D5E04004A7018 /* AppView.swift */,
-				D05326B8290D6779004A7018 /* HeaderView.swift */,
 				D05326BE290D7B17004A7018 /* DishesView.swift */,
-				D05326C2290E97D0004A7018 /* FactsView.swift */,
 				D05326CE290EAC32004A7018 /* RecipeCardView.swift */,
 				D0B20B07290ED07900F29546 /* RecipeDetailView.swift */,
 				D0EA6F5A291149660039507F /* ProfileView.swift */,
@@ -152,7 +133,6 @@
 				D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */,
 				D05326AF290D5D78004A7018 /* View */,
 				D05326AE290D5D72004A7018 /* Model */,
-				D05326AD290D5D68004A7018 /* Data */,
 				D09E271A290D532D00CF4C86 /* furastaApp.swift */,
 				D09E271E290D533000CF4C86 /* Assets.xcassets */,
 				D09E2720290D533000CF4C86 /* Preview Content */,
@@ -307,18 +287,14 @@
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
 				D05326BB290D70F3004A7018 /* HeaderModel.swift in Sources */,
 				D05326CB290EAB50004A7018 /* RecipeModel.swift in Sources */,
-				D05326BD290D713A004A7018 /* HeaderData.swift in Sources */,
 				D05326BF290D7B17004A7018 /* DishesView.swift in Sources */,
 				D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */,
 				D05326C7290E9CBF004A7018 /* FactModel.swift in Sources */,
 				D0EA6F5B291149670039507F /* ProfileView.swift in Sources */,
 				D0444B302911F95C00E0ED45 /* StoryBundle.swift in Sources */,
 				D0444B372912049400E0ED45 /* MethodView.swift in Sources */,
-				D05326C3290E97D0004A7018 /* FactsView.swift in Sources */,
 				D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */,
-				D05326B9290D6779004A7018 /* HeaderView.swift in Sources */,
 				D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */,
-				D05326C9290E9CFC004A7018 /* FactData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,8 @@ struct RecipeDetailView: View {
 
     @State private var pulsate: Bool = false
     @State private var showMethodModal: Bool = false
+    @State private var recipeComplete: Bool = false
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -40,11 +42,14 @@ struct RecipeDetailView: View {
                     ZStack(alignment: .bottom) {
                         Button("🍴 start recipe") {
                             showMethodModal = true
+                            recipeComplete = true
                         }
                         .modifier(buttonModifier())
                         .sheet(isPresented: $showMethodModal){
                             MethodView(recipe: self.recipe)
-                    }
+                            
+                        }
+                        
                     }
 //                    tagline
                     Text(recipe.headline)
