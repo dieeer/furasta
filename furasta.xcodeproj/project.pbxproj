@@ -21,6 +21,8 @@
 		D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326CE290EAC32004A7018 /* RecipeCardView.swift */; };
 		D0694CEE291B1C430026E1EA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0694CED291B1C430026E1EA /* LoginViewModel.swift */; };
 		D0694CF0291B1CC50026E1EA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0694CEF291B1CC50026E1EA /* LoginView.swift */; };
+		D0694CF2291BD7F10026E1EA /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0694CF1291BD7F10026E1EA /* ProfileModel.swift */; };
+		D0694CF4291BD92A0026E1EA /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0694CF3291BD92A0026E1EA /* ProfileViewModel.swift */; };
 		D090BBEE2919C3BC00A554EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */; };
 		D090BBF02919D71300A554EB /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090BBEF2919D71300A554EB /* RecipeViewModel.swift */; };
 		D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E271A290D532D00CF4C86 /* furastaApp.swift */; };
@@ -55,6 +57,8 @@
 		D0694CE8291B16A30026E1EA /* furasta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = furasta.entitlements; sourceTree = "<group>"; };
 		D0694CED291B1C430026E1EA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D0694CEF291B1CC50026E1EA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D0694CF1291BD7F10026E1EA /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		D0694CF3291BD92A0026E1EA /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D090BBED2919C3BC00A554EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D090BBEF2919D71300A554EB /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		D09E2717290D532D00CF4C86 /* furasta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = furasta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 				D0C54F33291ABD65007C452F /* TipViewModel.swift */,
 				D0444B2F2911F95C00E0ED45 /* StoryBundle.swift */,
 				D090BBEF2919D71300A554EB /* RecipeViewModel.swift */,
+				D0694CF1291BD7F10026E1EA /* ProfileModel.swift */,
+				D0694CF3291BD92A0026E1EA /* ProfileViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,10 +317,12 @@
 				D0EA6F5D291149D90039507F /* ProfileCardView.swift in Sources */,
 				D0C54F36291ACBD3007C452F /* TipCardView.swift in Sources */,
 				D090BBF02919D71300A554EB /* RecipeViewModel.swift in Sources */,
+				D0694CF4291BD92A0026E1EA /* ProfileViewModel.swift in Sources */,
 				D0C54F34291ABD65007C452F /* TipViewModel.swift in Sources */,
 				D0C54F30291ABCD8007C452F /* TipsView.swift in Sources */,
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
 				D05326BB290D70F3004A7018 /* HeaderModel.swift in Sources */,
+				D0694CF2291BD7F10026E1EA /* ProfileModel.swift in Sources */,
 				D05326CB290EAB50004A7018 /* RecipeModel.swift in Sources */,
 				D05326BF290D7B17004A7018 /* DishesView.swift in Sources */,
 				D0C54F2E291AA32F007C452F /* RecipeRatingButton.swift in Sources */,
