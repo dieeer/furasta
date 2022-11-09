@@ -6,11 +6,24 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct AppView: View {
     
+    @State private var userIsLoggedIn = false
+    
+    var user = Auth.auth().currentUser
     
     var body: some View {
+        if Auth.auth().currentUser != nil {
+            content
+        }
+        else {
+            LoginView()
+        }
+    }
+    
+    var content: some View {
         TabView{
             FurastaView()
                 .tabItem({
@@ -27,13 +40,14 @@ struct AppView: View {
                     Image(systemName: "person.fill")
                     Text("profile")
                 })
-
-            
-
+            TipsView()
+                .tabItem({
+                    Image(systemName: "info.circle")
+                    Text("tips")
+                })
         }
-        .edgesIgnoringSafeArea(.top)
-        .accentColor(Color("ColorTextAdaptive"))
     }
+        
     
     
 }

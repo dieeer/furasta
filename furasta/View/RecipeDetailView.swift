@@ -14,7 +14,11 @@ struct RecipeDetailView: View {
 
     @State private var pulsate: Bool = false
     @State private var showMethodModal: Bool = false
-    @State private var recipeComplete: Bool = false
+    @State var recipeComplete: Bool = false
+    
+    let columns = [
+        GridItem(.adaptive(minimum: 80))
+    ]
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -51,8 +55,10 @@ struct RecipeDetailView: View {
                         }
                         
                     }
+                    RecipeRatingButton(recipeComplete: $recipeComplete)
 //                    tagline
                     Text(recipe.headline)
+                        .font(.system(.subheadline, design: .serif))
                     //                    rating
                     RecipeRatingView(recipe: recipe)
                     //                    cooking
@@ -66,17 +72,15 @@ struct RecipeDetailView: View {
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .modifier(niceTextModifier())
 
-                    VStack(alignment: .leading, spacing: 5) {
+                    LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(recipe.ingredients, id: \.self) {
                             item in
-                            VStack(alignment: .leading, spacing: 5){
                                 Text(item)
-                                    .font(.footnote)
-                                    .multilineTextAlignment(.leading)
-                                Divider()
+                                    .font(.system(.body, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .padding()
                             }
                         }
-                    }
 
                     
                 }
@@ -120,7 +124,7 @@ struct buttonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(Color("ColorAppearanceAdaptive"))
-            .font(.system(.title3))
+            .font(.system(.title3, design: .serif))
             .fontWeight(.bold)
             .shadow(radius: 3)
             .padding(.vertical)
@@ -129,6 +133,42 @@ struct buttonModifier: ViewModifier {
             .background(
                 RoundedRectangle(cornerRadius: 64)
                     .fill(Color("ColorGreenAdaptive"))
+                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 4, x: 0, y: 4)
+            )
+    }
+}
+
+struct ratingButtonModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(Color("ColorAppearanceAdaptive"))
+            .font(.system(.title3, design: .serif))
+            .fontWeight(.bold)
+            .shadow(radius: 3)
+            .padding(.vertical)
+            .padding(.horizontal, 0)
+            .frame(width: 150)
+            .background(
+                RoundedRectangle(cornerRadius: 64)
+                    .fill(Color("ColorHeaderAdaptive"))
+                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 4, x: 0, y: 4)
+            )
+    }
+}
+
+struct ratingButtonDisabledModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(Color("ColorAppearanceAdaptive"))
+            .font(.system(.title3, design: .serif))
+            .fontWeight(.bold)
+            .shadow(radius: 3)
+            .padding(.vertical)
+            .padding(.horizontal, 0)
+            .frame(width: 150)
+            .background(
+                RoundedRectangle(cornerRadius: 64)
+                    .fill(Color.gray)
                     .shadow(color: Color("ColorBlackTransparentLight"), radius: 4, x: 0, y: 4)
             )
     }
@@ -144,3 +184,5 @@ struct niceTextModifier: ViewModifier {
             .foregroundColor(Color("ColorTextAdaptive"))
     }
 }
+
+

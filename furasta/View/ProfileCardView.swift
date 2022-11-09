@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseCore
+import FirebaseStorage
 
 struct ProfileCardView: View {
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             HStack {
@@ -17,13 +21,14 @@ struct ProfileCardView: View {
                         .padding()
                         .padding(.leading, 15)
                 Spacer()
-                Text("profile name")
+                Text(" ")
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
                     .padding()
                     .padding(.trailing, 15)
                 
             }
+            
             
             VStack {
                 HStack(alignment: .center, spacing: 4){

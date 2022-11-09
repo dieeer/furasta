@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ProfileView: View {
+    
+    let userEmail = Auth.auth().currentUser?.email
+    
     var body: some View {
         ScrollView{
             VStack {
+                Text(userEmail.unsafelyUnwrapped)
                 ProfileCardView()
                     .frame(maxWidth: 640)
                     .shadow(radius: 4, x: 0, y: 4)

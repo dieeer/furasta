@@ -23,10 +23,7 @@ struct RecipeCookingView: View {
                     
                 
                 Text("serves \(recipe.serves)")
-                    .foregroundColor(Color("ColorGreenAdaptive"))
-                    .font(.footnote)
-                    .italic()
-                    .padding(.leading)
+                    .modifier(CookingModifier())
             }
             Spacer()
             Divider()
@@ -37,16 +34,23 @@ struct RecipeCookingView: View {
                     .foregroundColor(Color("ColorTextAdaptive"))
                     
                 Text("\(recipe.preparation) minutes")
-                    .foregroundColor(Color("ColorGreenAdaptive"))
-                    .font(.footnote)
-                    .italic()
-                    .padding(.leading)
+                    .modifier(CookingModifier())
             }
             
             
         }
         .padding()
         .padding(.bottom, 12)
+    }
+}
+
+struct CookingModifier: ViewModifier {
+    func body(content: Content) -> some View{
+        content
+            .foregroundColor(Color("ColorGreenAdaptive"))
+            .font(.system(.body, design: .serif))
+            .italic()
+            .padding(.leading)
     }
 }
 
