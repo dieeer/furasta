@@ -17,50 +17,77 @@ struct LoginView: View {
     var body: some View {
         VStack {
             VStack{
-                Spacer()
+                
             }
-            VStack {
-                Text("welcome to furasta")
-                    .font(.system(.title, design: .serif))
-                    .fontWeight(.bold)
-                    .offset(y: 300)
-                Spacer()
-                SignInWithAppleButton { (request) in
-                    
-                    //                takes email and full name
-                    loginData.nonce = randomNonceString()
-                    request.requestedScopes = [.email, .fullName]
-                    request.nonce = sha256(loginData.nonce)
-                    
-                } onCompletion:
-                { (result) in
-                    
-                    //                handling error
-                    
-                    switch result{
-                    case .success(let user):
-                        
-                        print("success")
-                        
-                        //                    complete login
-                        guard let credential = user.credential as? ASAuthorizationAppleIDCredential else {
-                            print("error with firebase")
-                            return
-                        }
-                        loginData.authenticate(credential: credential)
-                        
-                    case.failure(let error):
-                        print(error.localizedDescription)
+            VStack(alignment: .center) {
+                VStack {
+                    VStack{
+                        Spacer()
+                        Image("logo-no-background")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all, 100)
+                            .foregroundColor(Color("ColorTextAdaptive"))
                     }
-                }
-                .signInWithAppleButtonStyle(.black)
+                    Text("welcome to furasta")
+                        .font(.system(.largeTitle, design: .serif))
+                        .fontWeight(.bold)
+                        .padding(.top, 5)
+                        .padding(.bottom, 5)
+                        .foregroundColor(Color("ColorTextAdaptive"))
+                    Text("a simpler way to cook")
+                        .font(.system(.title2, design: .serif))
+                        .padding(.top, 5)
+                        .padding(.bottom, 5)
+                        .foregroundColor(Color("ColorTextAdaptive"))
+                    
+                    SignInWithAppleButton { (request) in
+                        
+                        //                takes email and full name
+                        loginData.nonce = randomNonceString()
+                        request.requestedScopes = [.email, .fullName]
+                        request.nonce = sha256(loginData.nonce)
+                        
+                    } onCompletion:
+                    { (result) in
+                        
+                        //                handling error
+                        
+                        switch result{
+                        case .success(let user):
+                            
+                            print("success")
+                            
+                            
+                            //                    complete login
+                            guard let credential = user.credential as? ASAuthorizationAppleIDCredential else {
+                                print("error with firebase")
+                                return
+                            }
+                            loginData.authenticate(credential: credential)
+                            
+                        case.failure(let error):
+                            print(error.localizedDescription)
+                        }
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                    .signInWithAppleButtonStyle(.black)
                     .frame(height: 55)
                     .clipShape(Capsule())
                     .padding(.horizontal, 40)
-                    .offset(y: -70)
+                    .padding(.bottom, 70)
+                    
+                    Text("built with love in 🏴󠁧󠁢󠁳󠁣󠁴󠁿")
+                        .font(.system(.footnote, design: .serif))
+                        .padding(.top, 5)
+                        .padding(.bottom, 10)
+                        .foregroundColor(Color("ColorTextAdaptive"))
+                }.frame(alignment: .bottom)
+                
                 
             }
             
+            .background(Color("ColorAppearanceAdaptive"))
         }
     }
     

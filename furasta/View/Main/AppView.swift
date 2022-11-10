@@ -9,13 +9,19 @@ import SwiftUI
 import FirebaseAuth
 
 struct AppView: View {
+    @State private var showLogin: Bool = true
+    
     @EnvironmentObject var viewModel: LoginViewModel
     
     
     var body: some View {
-        if viewModel.userSession == nil {
-            LoginView()
-        } else {
+        if ((viewModel.userSession == nil)) {
+            MainTabView().sheet(isPresented: $showLogin){
+                LoginView()
+            }
+            
+        }
+        else {
             MainTabView()
         }
     }
@@ -24,4 +30,8 @@ struct AppView: View {
     
 }
 
-
+struct AppView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppView()
+    }
+}
