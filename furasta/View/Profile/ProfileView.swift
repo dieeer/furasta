@@ -10,12 +10,11 @@ import FirebaseAuth
 
 struct ProfileView: View {
     
-    let userEmail = Auth.auth().currentUser?.email
     
     var body: some View {
         ScrollView{
             VStack {
-                Text(userEmail.unsafelyUnwrapped)
+                logoutButton
                 ProfileCardView()
                     .frame(maxWidth: 640)
                     .shadow(radius: 4, x: 0, y: 4)
@@ -23,10 +22,13 @@ struct ProfileView: View {
             }
         }
     }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
+    
+    var logoutButton: some View {
+        Button {
+            LoginViewModel.shared.signOut()
+        } label: {
+            Text("logout")
+        }
     }
 }
+

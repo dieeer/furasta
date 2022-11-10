@@ -6,6 +6,8 @@ target 'furasta' do
   use_frameworks!
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift'
   pod 'FirebaseStorage'
+  pod 'Firebase'
   
 end

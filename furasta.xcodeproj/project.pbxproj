@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		235A892F06345CEFC0286D37 /* Pods_furasta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */; };
+		D008A59E291C6BCF008D4646 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008A59D291C6BCF008D4646 /* User.swift */; };
+		D008A5A0291C6FA2008D4646 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008A59F291C6FA1008D4646 /* MainTabView.swift */; };
+		D008A5A3291C73CE008D4646 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008A5A2291C73CE008D4646 /* DatabaseHelper.swift */; };
 		D0444B372912049400E0ED45 /* MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0444B362912049400E0ED45 /* MethodView.swift */; };
 		D0444B3C29120D1A00E0ED45 /* SnapToScroll in Frameworks */ = {isa = PBXBuildFile; productRef = D0444B3B29120D1A00E0ED45 /* SnapToScroll */; };
 		D05326B1290D5DBC004A7018 /* FurastaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05326B0290D5DBC004A7018 /* FurastaView.swift */; };
@@ -41,6 +44,9 @@
 		3E08906519ED8530E8C33AE2 /* Pods-furasta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-furasta.release.xcconfig"; path = "Target Support Files/Pods-furasta/Pods-furasta.release.xcconfig"; sourceTree = "<group>"; };
 		BDF04336BF7401A262264C35 /* Pods-furasta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-furasta.debug.xcconfig"; path = "Target Support Files/Pods-furasta/Pods-furasta.debug.xcconfig"; sourceTree = "<group>"; };
 		CD54C0E5E775BE7EDE3F3C2B /* Pods_furasta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_furasta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D008A59D291C6BCF008D4646 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D008A59F291C6FA1008D4646 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D008A5A2291C73CE008D4646 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		D0444B362912049400E0ED45 /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
 		D05326B0290D5DBC004A7018 /* FurastaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurastaView.swift; sourceTree = "<group>"; };
 		D05326B4290D5DEB004A7018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 			children = (
 				D05326B0290D5DBC004A7018 /* FurastaView.swift */,
 				D05326B6290D5E04004A7018 /* AppView.swift */,
+				D008A59F291C6FA1008D4646 /* MainTabView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 			children = (
 				D0694CF1291BD7F10026E1EA /* ProfileModel.swift */,
 				D0694CF3291BD92A0026E1EA /* ProfileViewModel.swift */,
+				D008A59D291C6BCF008D4646 /* User.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -183,9 +191,25 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		D008A59C291C693E008D4646 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D008A5A1291C73B9008D4646 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				D008A5A2291C73CE008D4646 /* DatabaseHelper.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
 		D05326AE290D5D72004A7018 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D008A5A1291C73B9008D4646 /* db */,
 				D05326BA290D70F3004A7018 /* HeaderModel.swift */,
 				D008A575291BEBD4008D4646 /* Auth */,
 				D008A572291BEB9E008D4646 /* Recipe */,
@@ -236,6 +260,7 @@
 				D09E271A290D532D00CF4C86 /* furastaApp.swift */,
 				D09E271E290D533000CF4C86 /* Assets.xcassets */,
 				D09E2720290D533000CF4C86 /* Preview Content */,
+				D008A59C291C693E008D4646 /* Services */,
 			);
 			path = furasta;
 			sourceTree = "<group>";
@@ -390,6 +415,7 @@
 				D090BBF02919D71300A554EB /* RecipeViewModel.swift in Sources */,
 				D0694CF4291BD92A0026E1EA /* ProfileViewModel.swift in Sources */,
 				D0C54F34291ABD65007C452F /* TipViewModel.swift in Sources */,
+				D008A5A3291C73CE008D4646 /* DatabaseHelper.swift in Sources */,
 				D0C54F30291ABCD8007C452F /* TipsView.swift in Sources */,
 				D09E271B290D532D00CF4C86 /* furastaApp.swift in Sources */,
 				D05326BB290D70F3004A7018 /* HeaderModel.swift in Sources */,
@@ -397,7 +423,9 @@
 				D05326CB290EAB50004A7018 /* RecipeModel.swift in Sources */,
 				D0C54F2E291AA32F007C452F /* RecipeRatingButton.swift in Sources */,
 				D0B20B06290ECF9000F29546 /* RecipeCookingView.swift in Sources */,
+				D008A5A0291C6FA2008D4646 /* MainTabView.swift in Sources */,
 				D0EA6F5B291149670039507F /* ProfileView.swift in Sources */,
+				D008A59E291C6BCF008D4646 /* User.swift in Sources */,
 				D0444B372912049400E0ED45 /* MethodView.swift in Sources */,
 				D05326CF290EAC32004A7018 /* RecipeCardView.swift in Sources */,
 				D0B20B08290ED07900F29546 /* RecipeDetailView.swift in Sources */,

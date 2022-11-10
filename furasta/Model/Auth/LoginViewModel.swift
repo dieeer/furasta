@@ -12,8 +12,17 @@ import FirebaseAuth
 
 class LoginViewModel: ObservableObject {
     
+    @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
     @Published var nonce = ""
     @AppStorage("log_status") var log_Status = false
+    
+    static let shared = LoginViewModel()
+    
+    init(){
+        userSession = Auth.auth().currentUser
+        fetchUser()
+    }
     
     func authenticate(credential: ASAuthorizationAppleIDCredential) {
         guard let token = credential.identityToken else{
@@ -44,6 +53,20 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
+    
+    func signOut(){
+        self.userSession = nil
+        try? Auth.auth().signOut()
+    }
+    
+    func fetchUser() {
+        guard let uid = userSession?.uid else { return }
+        COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            self.currentUser = user
+        }
+    }
+    
     
 }
 
