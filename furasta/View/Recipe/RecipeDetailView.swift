@@ -17,7 +17,7 @@ struct RecipeDetailView: View {
     @State var recipeComplete: Bool = false
     
     let columns = [
-        GridItem(.adaptive(minimum: 80))
+        GridItem(.adaptive(minimum: 120))
     ]
     
     @Environment(\.presentationMode) var presentationMode

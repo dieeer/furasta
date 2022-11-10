@@ -15,13 +15,14 @@ struct FurastaView: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .center, spacing: 0) {
+            VStack(alignment: .center, spacing: 5) {
+                
                 Text("furasta")
-                    .font(.system(.title, design: .serif))
+                    .font(.system(.title, design:.serif))
                     .fontWeight(.bold)
-                    .padding(.all)
-                    .foregroundColor(Color("ColorTextAdaptive"))
+                .foregroundColor(Color("ColorGreenAdaptive"))
             }
+            .padding()
             ScrollView{
                 
                 VStack(alignment: .leading, spacing: 5) {

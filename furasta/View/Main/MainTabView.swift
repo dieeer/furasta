@@ -16,25 +16,20 @@ struct MainTabView: View {
                     Image(systemName: "house")
                     Text("home")
                 })
-            SettingsView()
+            TipsView()
                 .tabItem({
-                    Image(systemName: "dial.high")
-                    Text("settings")
+                    Image(systemName: "info.circle")
+                    Text("tips")
                 })
             ProfileView()
                 .tabItem({
                     Image(systemName: "person.fill")
                     Text("profile")
                 })
-            TipsView()
+            SettingsView()
                 .tabItem({
-                    Image(systemName: "info.circle")
-                    Text("tips")
-                })
-            LoginView()
-                .tabItem({
-                    Image(systemName: "lock")
-                    Text("login")
+                    Image(systemName: "dial.high")
+                    Text("settings")
                 })
         }
     }

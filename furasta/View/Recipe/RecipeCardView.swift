@@ -48,6 +48,7 @@ struct RecipeCardView: View {
                     .font(.system(.body, design: .serif))
                     .foregroundColor(Color.gray)
                     .italic()
+                    .lineLimit(3)
 //                rates
                 RecipeCookingView(recipe: recipe)
 //

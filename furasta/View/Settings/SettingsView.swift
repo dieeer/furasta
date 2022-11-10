@@ -12,6 +12,8 @@ struct SettingsView: View {
     @State private var enableNotification: Bool = true
     @State private var backgroundRefresh: Bool = false
     
+    static let shared = LoginViewModel()
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
 //            header
@@ -40,27 +42,36 @@ struct SettingsView: View {
 //                section 2
                 Section(header: Text("about")) {
                     HStack{
-                        Text("name").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("furasta")
-                        
-                    }
-                    HStack{
                         Text("developer").foregroundColor(Color.gray)
                         Spacer()
                         Text("justin reid")
                         
                     }
-                    HStack{
-                        Text("site").foregroundColor(Color.gray)
-                        Spacer()
-                        Text("justinre.id")
-                        
-                    }
+                    
+                }
+                
+                Section(header: Text("you are currently logged in")) {
+                    Button(action: {
+
+                            }) {
+                                Text("log out")
+                                    .foregroundColor(Color.orange)
+                            }.onTapGesture {
+                                SettingsView.shared.signOut()
+                            }
+                    Button(action: {
+
+                            }) {
+                                Text("delete account")
+                                    .foregroundColor(Color.red)
+                            }.onTapGesture {
+                                SettingsView.shared.signOut()
+                            }
                 }
                 
             }
         }
+        .background(Color("ColorAppearanceAdaptive"))
         .frame(maxWidth: 640)
     }
 }

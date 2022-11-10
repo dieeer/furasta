@@ -21,9 +21,14 @@ struct TipsView: View {
         
         VStack {
             
-            VStack {
+            VStack(alignment: .center, spacing: 5) {
+                
                 Text("furasta")
+                    .font(.system(.title, design:.serif))
+                    .fontWeight(.bold)
+                .foregroundColor(Color("ColorTextAdaptive"))
             }
+            .padding()
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack{

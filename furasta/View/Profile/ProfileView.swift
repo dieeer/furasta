@@ -7,28 +7,36 @@
 
 import SwiftUI
 import FirebaseAuth
+import Firebase
 
 struct ProfileView: View {
     
+    let userEmail = Auth.auth().currentUser?.email
+    
     
     var body: some View {
-        ScrollView{
             VStack {
-                logoutButton
-                ProfileCardView()
-                    .frame(maxWidth: 640)
-                    .shadow(radius: 4, x: 0, y: 4)
-                    .padding(.horizontal)
+                VStack(alignment: .center, spacing: 5) {
+                    
+                    Text("furasta")
+                        .font(.system(.title, design:.serif))
+                        .fontWeight(.bold)
+                    .foregroundColor(Color("ColorGreenAdaptive"))
+                    
+                }
+                .padding()
+                ScrollView{
+                    VStack(alignment: .leading){
+                        Text(userEmail ?? "justin")
+                            .font(.system(.title2, design: .serif))
+                            .padding(.all)
+                            .offset(x: 80)
+                        
+                    }
+                
             }
-        }
+        }.background(Color("ColorAppearanceAdaptive"))
     }
     
-    var logoutButton: some View {
-        Button {
-            LoginViewModel.shared.signOut()
-        } label: {
-            Text("logout")
-        }
-    }
 }
 

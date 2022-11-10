@@ -15,6 +15,7 @@ class LoginViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var nonce = ""
+    
     @AppStorage("log_status") var log_Status = false
     
     static let shared = LoginViewModel()
